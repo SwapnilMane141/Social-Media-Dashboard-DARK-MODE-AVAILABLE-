@@ -1,0 +1,49 @@
+// SASS Variables
+
+$color-primary:#000;
+$color-secondary:hsl(225, 20%, 60%);
+$color-grey:#eeecec;
+$color-grey-dark:#bdbaba;
+$color-secondary:hsl(163, 72%, 41%);
+$color-red:hsl(356, 69%, 56%);
+
+$color-dark-toggle:rgb(52,152,219);
+
+$color-facebook-logo:hsl(208, 92%, 53%);
+$color-twitter-logo:hsl(208, 92%, 53%);
+// $color-instagram-logo:linear-gradient(hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+$color-instagram-logo:hsl(329, 70%, 58%);
+$color-yotube-logo:hsl(348, 97%, 39%);
+
+$color-bg-light-theme: hsl(231, 15%, 65%);
+$color-bg-dark-theme: linear-gradient(to right bottom,#378FE6,#3EDA82);
+
+
+
+// Media Queries
+
+$bp-largest:75em; //1200 px
+$bp-large:68.75em; //1100 px
+$bp-medium: 56.25em; // 900 px
+$bp-small: 37.5em; // 600 px
+$bp-smallest: 31.25em; // 500 px
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+}

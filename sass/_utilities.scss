@@ -1,0 +1,35 @@
+.border-facebook{
+    border-top: 5px solid $color-facebook-logo;
+}
+
+.border-twitter{
+    border-top: 5px solid $color-twitter-logo;
+}
+
+.border-instagram{
+    border-top: 5px solid $color-instagram-logo;
+}
+
+.border-youtube{
+    border-top: 5px solid $color-yotube-logo;
+}
+
+.color-cyan{
+    color:$color-secondary;
+}
+
+.color-red{
+    color:#DC414C;
+}
+
+
+
+.dark-mode{
+    transition: all 3s;
+    background-image: linear-gradient(to right bottom, #0f2027, #393737);
+    color:#fff;
+}
+
+.hover-element{
+    background-image: linear-gradient(to right bottom, #fff, #fff);
+}

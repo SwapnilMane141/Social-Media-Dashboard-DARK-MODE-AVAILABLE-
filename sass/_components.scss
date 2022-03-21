@@ -1,0 +1,402 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 5rem 0;
+
+    @media only screen and (max-width:$bp-medium){
+        margin: 2rem 0;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .heading{
+        margin:0 5rem;
+
+        @media only screen and (max-width:$bp-medium){
+            margin: 0 2rem;
+        }
+        
+        
+
+        &__primary{
+            font-size: 2.5rem;
+            padding: 1rem 0;
+        }
+
+        &__secondary{
+            color: $color-secondary;
+        }
+
+    }
+
+    .darkmode-toggle{
+        margin-right: 10rem;
+        display: flex;
+        
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width:$bp-medium){
+            margin-right: 5rem;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            border-top: 1px solid $color-grey-dark;
+            padding-top:3rem;
+            margin-left: 2rem;
+            width: 90%;
+        }
+
+        &__text{
+            color:$color-bg-light-theme;
+            margin:0 1rem;
+
+            @media only screen and (max-width:$bp-medium){
+                font-size: 1.4rem;
+            }
+        }
+
+        .checkbox{
+
+        }
+
+        .toggle{
+            position : relative ;
+            display : inline-block;
+            width : 6rem;
+            height : 3rem;
+            background-color: $color-secondary;
+            border-radius: 3rem;
+            border: 2px solid gray;
+
+        }
+
+        // After Slide Changes
+        .toggle:after{
+            content : '';
+            position: absolute;
+            width: 2.3rem;
+            height:2.3rem;
+            border-radius: 50%;
+            background-color: gray;
+            top:-3px;
+            left:0px;
+            transition: all .5s;
+            margin:.4rem 0 .4rem .2rem;
+        }
+
+        /* Checkbox checked effect */
+        .checkbox:checked + .toggle::after{
+            left:2.7rem;
+        }
+
+        /* Checkbox checked toggle label bg color */
+        .checkbox:checked + .toggle{
+            background-color: $color-dark-toggle;
+            transition: all .5s;
+        }
+
+        // Checkbox Vanished
+        .checkbox{
+            display: none;
+        }
+    }
+}
+
+.section-main-dashboard{
+    margin: 0 5rem;
+    display: grid;
+    grid-template-rows: repeat(1 , 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap:2rem;
+
+    @media only screen and (max-width:$bp-largest){
+        margin: 0 0;
+    }
+
+
+    .social-box{
+        background-color: $color-grey;
+        height:25rem;
+        width: 30rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: all .3s;
+
+        @media only screen and (max-width:$bp-largest){
+            height: 20rem;
+            width: 25rem;
+            margin: 0 2rem;
+        }
+
+        @media only screen and (max-width:$bp-medium){
+            height: 15rem;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        
+        &:hover{
+            cursor: pointer;
+            background-color: rgba($color-grey-dark,.8);
+        }
+
+        &__handle{  
+            display: flex;
+            align-items: center;
+
+            .handle-logo{
+                margin: 0 1rem;
+            }
+
+            .handle-text{
+                color:$color-bg-light-theme;
+
+                @media only screen and (max-width:$bp-medium){
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+        .followers-count{
+
+            &__number{
+                font-size: 6rem;
+                font-weight: 900;
+
+                @media only screen and (max-width:$bp-largest){
+                    font-size: 4rem;
+                }
+
+                @media only screen and (max-width:$bp-medium){
+                    font-size: 2rem;
+                }
+                
+            }
+
+            &__text{
+                text-transform: uppercase;
+                font-weight: 400;
+                text-align: center;
+                letter-spacing: .4rem;
+                color: $color-bg-light-theme;
+
+                @media only screen and (max-width:$bp-largest){
+                    letter-spacing: .2rem;
+                }
+
+                @media only screen and (max-width:$bp-medium){
+                    letter-spacing: 0rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+
+        .latest-count{
+            display: flex;
+            align-items: center;
+
+
+            .logo-up{
+                margin:0 1rem 0 0;
+                height: .7rem;
+                width: auto;
+
+                @media only screen and (max-width:$bp-largest){
+                    height: .4rem;
+                }
+
+
+            }
+
+            .logo-down{
+                margin:0 1rem 0 0;
+                height: .7rem;
+                width: auto;
+                @media only screen and (max-width:$bp-largest){
+                    height: .4rem;
+                }
+         
+            }
+
+            &__number{
+                @media only screen and (max-width:$bp-largest){
+                    font-size: 1.3rem;
+                }
+
+                @media only screen and (max-width:$bp-medium){
+                    font-size: 1.1rem;
+                }
+            }
+            
+        }
+
+    }
+
+
+}
+
+
+.secondary-dashboard{
+    margin: 5rem 0;
+
+    
+
+    .inner-box{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 20% 20% 20% 20%;
+        // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap:5rem;
+        // margin-right: 17rem;
+
+        @media only screen and (max-width:$bp-largest){
+            margin-right: 10rem;
+        }
+
+        @media only screen and (max-width:$bp-medium){
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            margin-right: 2rem;
+        }
+
+    }
+    
+
+
+    .overview-text{
+        margin: 0 0 2rem 5rem ;
+        font-size: 2rem;
+        color:$color-bg-light-theme;
+
+        @media only screen and (max-width:$bp-medium){
+            margin: 0 0 2rem 2rem;
+        }
+    }
+
+    .secondary-box{
+        margin: 0 5rem;
+        padding:3rem 3rem;
+        background-color: $color-grey;
+        display: inline-block;
+        height: 15rem;
+        width: 30rem;
+        border-radius: 1rem;
+        transition: all .2s;
+        cursor: pointer;
+
+        
+        @media only screen and (max-width:$bp-largest){
+            height: 12rem;
+            width: 20rem;
+        }
+        
+        @media only screen and (max-width:$bp-medium){
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            height: 12rem;
+            width: 80%;
+        }
+
+        &:hover{
+            background-color: rgba($color-grey-dark,.8);
+        }
+
+        .page-views{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__text{
+
+                @media only screen and (max-width:$bp-largest){
+                    font-size: 1.3rem;
+                }
+            }
+
+            .handle-logo{
+                margin-right: 1rem;
+
+                @media only screen and (max-width:$bp-largest){
+                    height: 1.5rem;
+                    width: auto;
+                }
+            }
+        }
+
+        .page-stats{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+
+            &__number{
+                font-size: 3rem;
+
+                @media only screen and (max-width:$bp-largest){
+                    font-size: 2rem;
+                }
+            }
+
+            .latest-count{
+                display: flex;
+                align-items: center;
+                
+                @media only screen and (max-width:$bp-largest){
+                    font-size: 1.3rem;
+                }
+
+
+                .logo-up{
+                    margin:0 1rem 0 0;
+                    height: .7rem;
+                    width: auto;
+
+                    @media only screen and (max-width:$bp-largest){
+                        height: .4rem;
+                        margin: 0 .5rem 0 0;
+                    }
+                }
+
+                .logo-down{
+                    margin:0 1rem 0 0;
+                    height: .7rem;
+                    width: auto;
+
+                    @media only screen and (max-width:$bp-largest){
+                        height: .4rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
